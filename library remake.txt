@@ -158,10 +158,6 @@ function library:CreateWindow(name, version, icon)
 					Tabs.Visible = false
 				end
 			end
-			wait()
-       game.Lighting.Blur:Destroy()
-       end
-    end
 		else
 			MinimizeGui = false
 			if Window.Size == UDim2.new(0, 600,0, 32) then
@@ -235,7 +231,7 @@ function library:CreateWindow(name, version, icon)
 
 		Tabs.Name = "Tabs"
 		Tabs.Parent = Window
-		Tabs.BackgroundColor3 = Color3.fromRGB(1, 2, 0)
+		Tabs.BackgroundColor3 = Color3.fromRGB(93, 0, 231)
 		Tabs.Position = UDim2.new(0, 5, 0, 36)
 		Tabs.Size = UDim2.new(0, 140, 1, -41)
 
@@ -244,7 +240,7 @@ function library:CreateWindow(name, version, icon)
 
 		SectionLabel.Name = "SectionLabel"
 		SectionLabel.Parent = Tabs
-		SectionLabel.BackgroundColor3 = Color3.fromRGB(1, 2, 0)
+		SectionLabel.BackgroundColor3 = Color3.fromRGB(93, 0, 231)
 		SectionLabel.BackgroundTransparency = 1.000
 		SectionLabel.Position = UDim2.new(0, 7, 0, 0)
 		SectionLabel.Size = UDim2.new(1, -7, 0, 30)
@@ -261,7 +257,7 @@ function library:CreateWindow(name, version, icon)
 		--LATER
 		--[[PageButton.Name = "PageButton"
 		PageButton.Parent = Tabs
-		PageButton.BackgroundColor3 = Color3.fromRGB(1, 2, 0)
+		PageButton.BackgroundColor3 = Color3.fromRGB(93, 0, 231)
 		PageButton.BackgroundTransparency = 1.000
 		PageButton.Size = UDim2.new(1, -14, 0, 20)
 		PageButton.Font = Enum.Font.Gotham
@@ -306,7 +302,7 @@ function library:CreateWindow(name, version, icon)
 			Page.Name = "Page"
 			Page.Parent = Window
 			Page.Active = true
-			Page.BackgroundColor3 = Color3.fromRGB(1, 2, 0)
+			Page.BackgroundColor3 = Color3.fromRGB(93, 0, 231)
 			Page.BorderColor3 = Color3.fromRGB(1, 2, 0)
 			Page.BorderSizePixel = 0
 			Page.Position = UDim2.new(0, 150, 0, 36)
