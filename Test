@@ -1,4 +1,4 @@
-local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/ALPERALL/Nano-X/main/library%20remake.txt'))()
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/NanoXGUI/KDJDKDJ/main/library%20remake.txt'))()
 
 
 
