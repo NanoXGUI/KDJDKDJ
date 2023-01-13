@@ -158,8 +158,6 @@ function library:CreateWindow(name, version, icon)
 					Tabs.Visible = false
 				end
 			end
-			wait()
-		game.Lighting.Blur:Destroy()
 		else
 			MinimizeGui = false
 			if Window.Size == UDim2.new(0, 600,0, 32) then
