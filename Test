@@ -1,0 +1,834 @@
+local library = loadstring(game:HttpGet('https://raw.githubusercontent.com/ALPERALL/Nano-X/main/library%20remake.txt'))()
+
+
+
+local Window = library:CreateWindow("Nano X", "V3.0", 11864297492)
+
+
+
+local Tab = Window:CreateTab("Scripts")
+
+
+
+local Page = Tab:CreateFrame("Admin Scripts")
+
+
+
+Label = Page:CreateLabel("Nano X")
+
+Label:UpdateLabel("Have Fun!")
+
+
+
+Button = Page:CreateButton("İnfinite Yield", "Runs some admin commands", function()
+
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+
+end)
+
+
+
+Button = Page:CreateButton("Cmd X", "Runs some admin commands", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CMD-X/CMD-X/master/Source", true))()
+
+end)
+
+
+
+Button = Page:CreateButton("Fates Admin", "Runs some admin commands", function()
+
+    ------Fate's Admin (brought to you by Hacks Home)--------
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/fatesc/fates-admin/main/main.lua"))(); 
+
+end)
+
+
+
+Button = Page:CreateButton("Leg's Admin", "Runs some admin commands", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/leg1337/legadmv2/main/legadminv2.lua'))()
+
+end)
+
+
+
+Button = Page:CreateButton("IV Admin", "Runs some admin commands", function()
+
+loadstring(game:HttpGet('\104\116\116\112\115\58\47\47\114\97\119\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\79\109\110\105\112\111\116\101\110\99\101\68\101\118\101\108\111\112\101\114\47\78\117\109\98\101\114\47\109\97\105\110\47\49\46\108\117\97'))()
+
+end)
+
+
+
+Button = Page:CreateButton("Domain X Admin", "Runs some admin commands", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/shlexware/DomainX/main/source',true))()
+
+end)
+
+
+
+Button = Page:CreateButton("Orca Admin", "Runs some admin commands", function()
+
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/richie0866/orca/master/public/snapshot.lua"))()
+
+end)
+
+
+
+local Page = Tab:CreateFrame("Player Scripts")
+
+
+
+Label = Page:CreateLabel("Nano X")
+
+Label:UpdateLabel("Have Fun!")
+
+
+
+Page:CreateSlider("Speed", 16, 500,function(arg)
+   game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+end)
+
+
+
+Page:CreateSlider("JumpPower", 0, 500,function(s)
+
+   game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+
+end)
+
+
+
+Button = Page:CreateButton("Reset WalkSpeed And JumpPower", "reset", function()
+
+game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+
+game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+
+end)
+
+
+
+Button = Page:CreateButton("RTX Gui", "more realistic!", function()
+
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/RTX%20Gui%20Hub%20Obfuscator'))()
+
+end)
+
+
+
+Button = Page:CreateButton("Fly Gui", "For Mobile Devices", function()
+
+loadstring("\108\111\97\100\115\116\114\105\110\103\40\103\97\109\101\58\72\116\116\112\71\101\116\40\40\39\104\116\116\112\115\58\47\47\103\105\115\116\46\103\105\116\104\117\98\117\115\101\114\99\111\110\116\101\110\116\46\99\111\109\47\109\101\111\122\111\110\101\89\84\47\98\102\48\51\55\100\102\102\57\102\48\97\55\48\48\49\55\51\48\52\100\100\100\54\55\102\100\99\100\51\55\48\47\114\97\119\47\101\49\52\101\55\52\102\52\50\53\98\48\54\48\100\102\53\50\51\51\52\51\99\102\51\48\98\55\56\55\48\55\52\101\98\51\99\53\100\50\47\97\114\99\101\117\115\37\50\53\50\48\120\37\50\53\50\48\102\108\121\37\50\53\50\48\50\37\50\53\50\48\111\98\102\108\117\99\97\116\111\114\39\41\44\116\114\117\101\41\41\40\41\10\10")()
+
+end)
+
+
+Button = Page:CreateButton("Fly Gui V2", "For mobile fly vith vehicle fly", function()
+local Speed = 100
+
+	-- Gui to Lua
+	-- Version: 3.2
+	local HumanoidRP = game.Players.LocalPlayer.Character.HumanoidRootPart
+	-- Instances:
+
+	local ScreenGui = Instance.new("ScreenGui")
+	local W = Instance.new("TextButton")
+	local S = Instance.new("TextButton")
+	local A = Instance.new("TextButton")
+	local D = Instance.new("TextButton")
+	local Fly = Instance.new("TextButton")
+	local unfly = Instance.new("TextButton")
+	local StopFly = Instance.new("TextButton")
+
+	--Properties:
+
+	ScreenGui.Parent = game.CoreGui
+	ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+	unfly.Name = "unfly"
+	unfly.Parent = ScreenGui
+	unfly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	unfly.Position = UDim2.new(0.694387913, 0, 0.181818187, 0)
+	unfly.Size = UDim2.new(0, 72, 0, 50)
+	unfly.Font = Enum.Font.SourceSans
+	unfly.Text = "unfly"
+	unfly.TextColor3 = Color3.fromRGB(170, 0, 255)
+	unfly.TextScaled = true
+	unfly.TextSize = 14.000
+	unfly.TextWrapped = 
+		unfly.MouseButton1Down:Connect(function()
+		HumanoidRP:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		HumanoidRP:FindFirstChildOfClass("BodyGyro"):Destroy()
+	end)
+
+	StopFly.Name = "Stop Fly"
+	StopFly.Parent = ScreenGui
+	StopFly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	StopFly.Position = UDim2.new(0.695689976, 0, 0.0213903747, 0)
+	StopFly.Size = UDim2.new(0, 71, 0, 50)
+	StopFly.Font = Enum.Font.SourceSans
+	StopFly.Text = "Stop fly"
+	StopFly.TextColor3 = Color3.fromRGB(170, 0, 255)
+	StopFly.TextScaled = true
+	StopFly.TextSize = 14.000
+	StopFly.TextWrapped = true
+	StopFly.MouseButton1Down:Connect(function()
+		HumanoidRP.Anchored = true
+	end)
+
+	Fly.Name = "Fly"
+	Fly.Parent = ScreenGui
+	Fly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	Fly.Position = UDim2.new(0.588797748, 0, 0.0213903747, 0)
+	Fly.Size = UDim2.new(0, 66, 0, 50)
+	Fly.Font = Enum.Font.SourceSans
+	Fly.Text = "Fly"
+	Fly.TextColor3 = Color3.fromRGB(170, 0, 127)
+	Fly.TextScaled = true
+	Fly.TextSize = 14.000
+	Fly.TextWrapped = true
+	Fly.MouseButton1Down:Connect(function()
+		local BV = Instance.new("BodyVelocity",HumanoidRP)
+		local BG = Instance.new("BodyGyro",HumanoidRP)
+		BG.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+		BG.D = 5000
+		BG.P = 50000
+		BG.CFrame = game.Workspace.CurrentCamera.CFrame
+		BV.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+	end)
+
+	W.Name = "W"
+	W.Parent = ScreenGui
+	W.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	W.Position = UDim2.new(0.161668837, 0, 0.601604283, 0)
+	W.Size = UDim2.new(0, 58, 0, 50)
+	W.Font = Enum.Font.SourceSans
+	W.Text = "↑"
+	W.TextColor3 = Color3.fromRGB(226, 226, 526)
+	W.TextScaled = true
+	W.TextSize = 5.000
+	W.TextWrapped = true
+	W.MouseButton1Down:Connect(function()
+		HumanoidRP.Anchored = false
+		HumanoidRP:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		HumanoidRP:FindFirstChildOfClass("BodyGyro"):Destroy()
+		wait(.1)
+		local BV = Instance.new("BodyVelocity",HumanoidRP)
+		local BG = Instance.new("BodyGyro",HumanoidRP)
+		BG.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+		BG.D = 50000
+		BG.P = 50000
+		BG.CFrame = game.Workspace.CurrentCamera.CFrame
+		BV.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+		BV.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * Speed
+	end)
+
+
+	S.Name = "S"
+	S.Parent = ScreenGui
+	S.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+	S.Position = UDim2.new(0.161668837, 0, 0.735294104, 0)
+	S.Size = UDim2.new(0, 58, 0, 50)
+	S.Font = Enum.Font.SourceSans
+	S.Text = "↓"
+	S.TextColor3 = Color3.fromRGB(255, 255, 255)
+	S.TextScaled = true
+	S.TextSize = 14.000
+	S.TextWrapped = true
+	S.MouseButton1Down:Connect(function()
+		HumanoidRP.Anchored = false
+		HumanoidRP:FindFirstChildOfClass("BodyVelocity"):Destroy()
+		HumanoidRP:FindFirstChildOfClass("BodyGyro"):Destroy()
+		wait(.1)
+		local BV = Instance.new("BodyVelocity",HumanoidRP)
+		local BG = Instance.new("BodyGyro",HumanoidRP)
+		BG.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
+		BG.D = 5000
+		BG.P = 50000
+		BG.CFrame = game.Workspace.CurrentCamera.CFrame
+		BV.MaxForce = Vector3.new(math.huge,math.huge,math.huge)
+		BV.Velocity = game.Workspace.CurrentCamera.CFrame.LookVector * -Speed
+	end)
+end)
+
+
+Button = Page:CreateButton("İnfinite Jump", "For Mobile", function()
+
+    local InfiniteJumpEnabled = true
+
+game:GetService("UserInputService").JumpRequest:connect(function()
+
+	if InfiniteJumpEnabled then
+
+		game:GetService"Players".LocalPlayer.Character:FindFirstChildOfClass'Humanoid':ChangeState("Jumping")
+
+	end
+
+end)
+
+end)
+
+
+Button = Page:CreateButton("Nettles", "Netless Script", function()
+for i,v in next, game:GetService("Players").LocalPlayer.Character:GetDescendants() do
+
+if v:IsA("BasePart") and v.Name ~="HumanoidRootPart" then 
+
+game:GetService("RunService").Heartbeat:connect(function()
+
+v.Velocity = Vector3.new(0,35,0)
+
+wait(0.5)
+
+end)
+
+end
+
+end
+
+
+
+game:GetService("StarterGui"):SetCore("SendNotification", { 
+
+	Title = "Notification";
+
+	Text = "Netless activated";
+
+	Icon = "rbxthumb://type=Asset&id=5107182114&w=150&h=150"})
+
+Duration = 16;
+end)
+
+
+
+Button = Page:CreateButton("Keyboard Gui", "For Mobile", function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/advxzivhsjjdhxhsidifvsh/mobkeyboard/main/main.txt", true))()
+
+end)
+
+
+
+Button = Page:CreateButton("Auto Clicker", "For Mobile", function()
+
+    --Subscribe To Alex Scripter--
+
+--You Cant Turn It Off, only if u rejoin --
+
+
+
+--// Setting \--
+
+local range = 1000
+
+
+
+--// Variable \--
+
+local player = game:GetService("Players").LocalPlayer
+
+
+
+--// Script \--
+
+game:GetService("RunService").RenderStepped:Connect(function()
+
+    local p = game.Players:GetPlayers()
+
+    for i = 2, #p do local v = p[i].Character
+
+        if v and v:FindFirstChild("Humanoid") and v.Humanoid.Health > 0 and v:FindFirstChild("HumanoidRootPart") and player:DistanceFromCharacter(v.HumanoidRootPart.Position) <= range then
+
+            local tool = player.Character and player.Character:FindFirstChildOfClass("Tool")
+
+            if tool and tool:FindFirstChild("Handle") then
+
+                tool:Activate()
+
+                for i,v in next, v:GetChildren() do
+
+                    if v:IsA("BasePart") then
+
+                        firetouchinterest(tool.Handle,v,0)
+
+                        firetouchinterest(tool.Handle,v,1)
+
+                    end
+
+                end
+
+            end
+
+        end
+
+    end
+
+end)
+
+end)
+
+
+
+Button = Page:CreateButton("Private Server", "Private", function()
+
+local Http = game:GetService("HttpService")
+
+local TPS = game:GetService("TeleportService")
+
+local Api = "https://games.roblox.com/v1/games/"
+
+
+
+local _place = game.PlaceId
+
+local _servers = Api.._place.."/servers/Public?sortOrder=Asc&limit=100"
+
+function ListServers(cursor)
+
+   local Raw = game:HttpGet(_servers .. ((cursor and "&cursor="..cursor) or ""))
+
+   return Http:JSONDecode(Raw)
+
+end
+
+
+
+local Server, Next; repeat
+
+   local Servers = ListServers(Next)
+
+   Server = Servers.data[1]
+
+   Next = Servers.nextPageCursor
+
+until Server
+
+
+
+TPS:TeleportToPlaceInstance(_place,Server.id,game.Players.LocalPlayer)
+end)
+
+local Page = Tab:CreateFrame("Troll Scripts")
+
+
+
+Label = Page:CreateLabel("Nano X")
+
+Label:UpdateLabel("Have Fun!")
+
+
+Button = Page:CreateButton("Bighead Script", "Rtrho heads only", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/sysGhost-aka-BiKode/Scripts2022/main/BigHeadV3_Unpatched", true))()
+end)
+
+Button = Page:CreateButton("Tall Script", "make your character the biggest from your avatar", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ALPERALL/Nano-X/main/Tall%20script"))()
+end)
+
+Button = Page:CreateButton("Fe Toggle Fling", "x for fling", function()
+-- discord.gg/G4nhhKFyyw
+
+_G.KeyCode = "X"
+
+loadstring(game:HttpGet("https://shattered-gang.lol/scripts/fe/touch_fling.lua"))()
+end)
+
+
+Button = Page:CreateButton("Fling Tool", "Fling Troll", function()
+loadstring(game:HttpGet(('https://pastefy.ga/xBdd9GId/raw'),true))()
+end)
+
+
+Button = Page:CreateButton("Insane Fling", "Need 3D shirt and must be R15", function()
+
+end)
+
+
+Button = Page:CreateButton("Chat Art", "write .ass in chat :D", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/omegachadgaming/mongus/main/main.lua"))()
+end)
+
+
+Button = Page:CreateButton("Chat Hax", "Chat troll , Fake message", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/MBpnp3yS'))()
+end)
+
+
+Button = Page:CreateButton("Chat Bypass", "relax and fuck", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/x114/RobloxScripts/main/FullChatBypass"))()
+end)
+
+
+Button = Page:CreateButton("Fe Telekinesis", "unanchored only", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/Z33NcECh", true))()
+end)
+
+
+Button = Page:CreateButton("E to İnvisible", "Press E", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ALPERALL/-nvisible-/main/%C4%B0nvisible"))()
+end)
+
+
+
+Button = Page:CreateButton("Click Tp Tool", "For Mobile", function()
+
+mouse = game.Players.LocalPlayer:GetMouse()
+
+tool = Instance.new("Tool")
+
+tool.RequiresHandle = false
+
+tool.Name = "Click Teleport"
+
+tool.Activated:connect(function()
+
+local pos = mouse.Hit+Vector3.new(0,2.5,0)
+
+pos = CFrame.new(pos.X,pos.Y,pos.Z)
+
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = pos
+
+end)
+
+tool.Parent = game.Players.LocalPlayer.Backpack
+
+end)
+
+
+
+Button = Page:CreateButton("Walk On Walls", "bruh", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/zXk4Rq2r"))()
+end)
+
+local Page = Tab:CreateFrame("Games")
+
+
+
+Label = Page:CreateLabel("Nano X")
+
+Label:UpdateLabel("Have Fun!")
+
+
+
+Button = Page:CreateButton("Adopt Me", "Adopt Me Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BloxiYT/Diamond/main/AdoptMe"))()
+end)
+
+
+
+Button = Page:CreateButton("Apeirophobia", "Apheriobia Gui", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/E240-h/apgui/main/n'),true))()
+end)
+
+
+Button = Page:CreateButton("Arsenal", "Arsenal Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Maikderninja/Maikderninja/main/PWNERHUB.lua"))();
+end)
+
+
+Button = Page:CreateButton("A Universal Time", "a universal time gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TweedLeak/Scripts/main/A-Universal-Time"))()
+end)
+
+
+Button = Page:CreateButton("Be a Parkour Ninja", "Be a Prakour Ninja Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Min1273/n-to/main/README.md"))()
+end)
+
+
+Button = Page:CreateButton("Bedwars", "Bedwars Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+end)
+
+
+Button = Page:CreateButton("Blox Fruit", "Blox Fruit Hoho hub", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/BlodyXHub/Xeniel_All/main/ForAll"))()
+end)
+
+
+Button = Page:CreateButton("Brookhaven", "Brookhaven Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/IceMael7/NewIceHub/main/Brookhaven"))()
+end)
+
+
+Button = Page:CreateButton("Breaking Point", "Breaking Point Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ColdStep2/Breaking-Point-Funny-Squid-Hax/main/Breaking%20Point%20Funny%20Squid%20Hax",true))()
+end)
+
+
+Button = Page:CreateButton("Combat Warriors", "Combat Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SussyImposterRed/Scripts/main/NEW_NOVA"))()
+end)
+
+
+Button = Page:CreateButton("Da Hood", "Da Hood Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/spacexrandom/Lua/main/DaHood", true))()
+end)
+
+
+Button = Page:CreateButton("Doors", "Doors Gui", function()
+loadstring(game:HttpGet(('https://pastebin.com/raw/R8QMbhzv')))()
+end)
+
+
+Button = Page:CreateButton("Dungeon Quest", "Dungeon Quest Gui", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
+
+
+Button = Page:CreateButton("Energy Assault", "Energy Assault Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Just-Egg-Salad/roblox-scripts/main/Energy%20Assault%20Big%20Head", true))()
+end)
+
+
+Button = Page:CreateButton("Epic Minigames", "Epic Minigames Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SlamminPig/rblxgames/main/Epic%20Minigames/EpicMinigamesGUI"))()
+end)
+
+
+Button = Page:CreateButton("Evade", "Evade Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GamingScripter/Darkrai-X/main/Games/Evade"))()
+end)
+
+
+Button = Page:CreateButton("Hide And Seek Extreme", "Hide Gui", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/GhostPlayer352/Test4/main/Hide%20And%20Seek%20Extreme'))()
+end)
+
+
+Button = Page:CreateButton("Jailbreak", "Jailbreak Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/wawsdasdacx/ohascriptnrrewading/main/jbsaxcriptidk1"))()
+end)
+
+
+Button = Page:CreateButton("Knife Ability Test KAT", "Kat Gui", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/CvEpzJeC"))()
+end)
+
+
+Button = Page:CreateButton("Legends Of Speed", "Legends Of Speed Gui", function()
+loadstring(Game:HttpGet("https://pastebin.com/raw/0A4J7V8M"))()
+end)
+
+
+Button = Page:CreateButton("Mad City Chapter 2", "Mad City Gui", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/acsu123/HOHO_H/main/Loading_UI'))()
+end)
+
+
+Button = Page:CreateButton("Murder Mystery 2 mm2", "mm2 Gui", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/YnC4ANRr"))()
+end)
+
+
+Button = Page:CreateButton("Murder Party", "Murder Party Gui", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/zachisfunny/Murder-Party-Script/main/Script'),true))()
+end)
+
+
+Button = Page:CreateButton("Ninja Legends", "Ninja Legends Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/TrixAde/Proxima-Hub/main/Main.lua"))()
+end)
+
+
+Button = Page:CreateButton("Panik", "Panik Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/LOLking123456/panik/main/panik22"))()
+end)
+
+
+Button = Page:CreateButton("Pet Simulator X", "Pet Sim x Gui", function()
+loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/jmesfo0/RobloxScripts/main/psx-jmes.lua"))()
+end)
+
+
+Button = Page:CreateButton("Phantom Forces", "Phantom Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/VoidMasterX/strawhook/main/script.lua"))()
+end)
+
+Button = Page:CreateButton("Prison Life Admin", "Prison life Gui", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/XTheMasterX/Scripts/Main/PrisonLife'),true))()
+end)
+
+
+Button = Page:CreateButton("Rake Remastered", "Rake Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/RealZzHub/MainV2/main/Main.lua"))()
+end)
+
+
+Button = Page:CreateButton("Randomizer", "Randomizer Gui", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/TdbxvNPL"))()
+end)
+
+
+Button = Page:CreateButton("Survive The Killer", "stk Gui", function()
+local games = { ["SurviveTheKiller"] = 4580204640 } for i,v in pairs(games) do if game.PlaceId == v then print("Supported!"); loadstring(game:HttpGet("https://raw.githubusercontent.com/MiloHaxx/ChairWare/main/Games/" .. i .. ".lua"))() end end loadstring(game:HttpGet("https://raw.githubusercontent.com/MiloHaxx/ChairWare/main/dcJoin.lua"))()
+end)
+
+
+Button = Page:CreateButton("Squid Game", "Squid Game Gui", function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/BaconLords/Random-Shit/main/Squid%20Game.lua")))()
+end)
+
+
+Button = Page:CreateButton("Pop it Trading", "popit Gui", function()
+loadstring(game:HttpGet(("https://thekillerhood.xyz/trading/popitscript.txt"), true))()
+end)
+
+
+Button = Page:CreateButton("Anime Clicker Fight", "Anime Clicker Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/bebedi15/DisticHub/main/Loader.lua"))()
+end)
+
+
+Button = Page:CreateButton("The Mimic", "The Mimic Gui", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/KTollT/KTollT/main/README.md'))()
+end)
+
+
+Button = Page:CreateButton("Touch Football", "Touch Football Gui", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/X81f1xN3"))()
+end)
+
+
+Button = Page:CreateButton("Tower Of Hell", "Tower Of Hell", function()
+loadstring(game:HttpGet('https://pastebin.com/raw/BbVHjH56'))()
+end)
+
+
+Button = Page:CreateButton("Grand Piece Online", "Grand Piece Online Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/CFA-HUB/CFA-HUB/main/cfahubfree.lua"))() 
+end)
+
+
+Button = Page:CreateButton("Anime Dimensions Simulator", "Anime Dimensions Simulator", function()
+pcall(function()
+loadstring(game:HttpGet("http://riverhub.xyz/" .. tostring(game.PlaceId) .. ".lua"))()
+end)
+end)
+
+
+Button = Page:CreateButton("Funky Friday", "Funky Friday Gui", function()
+
+end)
+
+
+Button = Page:CreateButton("Lucky Block Battle Ground", "Lucky Block Battle Ground Gui", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/t0MikWVy"))()
+end)
+
+
+Button = Page:CreateButton("Ohio", "Ohio Gui", function()
+loadstring(game:HttpGet("https://pastebin.com/raw/hkvHeHed",true))()
+end)
+
+
+Button = Page:CreateButton("Fruit Battlegrounds", "Fruit Battlegrounds Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1f0yt/community/master/Flarehubs"))()
+end)
+
+
+Button = Page:CreateButton("Nico's Nextbots", "Nico's Nextbots Gui", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/dropouut/Shindai/main/wercT.lua"))()
+end)
+
+
+Button = Page:CreateButton("Your Bizarre Adventure", "Yba Gui", function()
+_G.Options = {
+    ["ToggleKey"] = "Delete",
+}
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/VoidGaster/Scripts/main/" .. tostring(game.PlaceId)),true))()
+end)
+
+
+local Page = Tab:CreateFrame("Fe Scripts")
+
+
+
+Label = Page:CreateLabel("Nano X")
+
+Label:UpdateLabel("Some scripts may require a hat or hair")
+
+
+Label = Page:CreateLabel("Nano X")
+
+Label:UpdateLabel("Fe Hubs")
+
+Button = Page:CreateButton("Gelatek Hub", "many fe [R15 and R6] scripts", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Gelatekussy/GelatekHub/main/Main.lua"))()
+end)
+
+
+Button = Page:CreateButton("Pendulum Hub", "many fe [R15 and R6] scripts", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Tescalus/Pendulum-Hubs-Source/main/Pendulum%20Hub%20V5.lua"))()
+end)
+
+
+Button = Page:CreateButton("Breaker.exe Hub", "many fe [R15 and R6] scripts", function()
+loadstring(game:HttpGet(("https://raw.githubusercontent.com/OmarXploits/-Free-Breaker.exe/main/Breaker.exe.lua"),true))()
+end)
+
+
+Button = Page:CreateButton("Universal FE Hub", "many fe [R6] scripts", function()
+loadstring(game:HttpGet('https://raw.githubusercontent.com/Dvrknvss/UniversalFEScriptHub/main/Script'))()
+end)
+
+
+Label = Page:CreateLabel("Nano X")
+
+Label:UpdateLabel("Fe Animations")
+
+
+Button = Page:CreateButton("Fe Fake VR script", "[R6] and [R15]", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/1234keremr1234/31/main/vrscript", true))()
+end)
+
+
+Button = Page:CreateButton("Fe Nameless Animation", "Cool Animation [R15 and R6]", function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ALPERALL/Nano-X/main/Nameless%20anim%20v2"))()
+end)
+
+
+Button = Page:CreateButton("Fe Snake", "[R15 and R6]", function()
+loadstring(game:HttpGet(('https://pastefy.ga/tWBTcE4R/raw'),true))()
+end)
+
+
+Button = Page:CreateButton("Fe Slasher Script (fling)", "[R6] Need hat , id: 7548993875 ", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Toasty8i/slasher/main/slasher.lua'),true))()
+end)
+
+
+Button = Page:CreateButton("Fe Slasher Script V2 (fling)", "[R6] Need hat , id: 7548993875 ", function()
+loadstring(game:HttpGet(('https://raw.githubusercontent.com/Alperabayli/Nano-X/main/Gui'),true))()
+end)
+
+
+local Page = Tab:CreateFrame("Credits")
+
+
+
+Label = Page:CreateLabel("Developer Note")
+
+Label:UpdateLabel("Welcome to the Nano X!")
+
+Label = Page:CreateLabel("Developer Note")
+
+Label:UpdateLabel("you can contact us on discord : >Alper#9400")
+
+Label = Page:CreateLabel("Developer Note")
+
+Label:UpdateLabel("Enjoyable gameplay. 🔥")
+
+Label = Page:CreateLabel("Developer Note")
+
+Label:UpdateLabel("I'm turkish and i love anine girls 🥵")
+
+
+Button = Page:CreateButton("Youtube", "Copied to clipboard", function()
+setclipboard("https://m.youtube.com/channel/UCjQ69HkJnnE--Rp-lxZWjIA")
+toclipboard("https://m.youtube.com/channel/UCjQ69HkJnnE--Rp-lxZWjIA")
+end)
