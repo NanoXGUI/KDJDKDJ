@@ -2,7 +2,7 @@ if not game:IsLoaded() then
 	game.Loaded:wait() 
 end
 
--- etra credits to twink marie
+-- extra credits to twink marie
 local library = {}
 local request = request or http_request or (identifyexecutor() == "Synapse X" and syn.request) or (http and http.request)
 loadstring(request({Url="https://raw.githubusercontent.com/cypherdh/Script-Library/main/InstanceProtect",Method="GET"}).Body)()
@@ -39,7 +39,7 @@ function library:CreateWindow(name, version, icon)
 
 	Window.Name = "Window"
 	Window.Parent = MyGui
-	Window.BackgroundColor3 = Color3.fromRGB(160, 0, 190)
+	Window.BackgroundColor3 = Color3.fromRGB(49, 49, 59)
 	Window.Position = UDim2.new(0.5, -300, 0.600000024, -200)
 	Window.Size = UDim2.new(0, 0, 0, 0)
 	Window.ClipsDescendants = true
@@ -131,9 +131,7 @@ function library:CreateWindow(name, version, icon)
 	_4pxShadow2px_2.SliceCenter = Rect.new(17, 17, 283, 283)
 
 	Close.MouseButton1Click:Connect(function()
-      wait()
-		game.Lighting.Blur:Destroy()
- TS:Create(Window, TweenInfo.new(0.5), {Size = UDim2.new(0, 600, 0, 0)}):Play()
+		TS:Create(Window, TweenInfo.new(0.5), {Size = UDim2.new(0, 600, 0, 0)}):Play()
 		repeat
 			wait()
 		until Window.Size == UDim2.new(0, 600, 0, 0)
@@ -146,9 +144,7 @@ function library:CreateWindow(name, version, icon)
 	end)
 
 	Minimize.MouseButton1Click:Connect(function()
-		wait()
-		game.Lighting.Blur:Destroy()
-if not MinimizeGui then
+		if not MinimizeGui then
 			MinimizeGui = true
 			if Window.Size == UDim2.new(0, 600,0, 400) then
 				TS:Create(Window, TweenInfo.new(0.25), {Size = UDim2.new(0, 600,0, 32)}):Play()
@@ -160,7 +156,9 @@ if not MinimizeGui then
 					Tabs.Visible = false
 				end
 			end
-		else
+		wait()
+		local blur = Instance.new("BlurEffect", game.Lighting)
+else
 			MinimizeGui = false
 			if Window.Size == UDim2.new(0, 600,0, 32) then
 				if Page and Page.Visible == true then
@@ -172,9 +170,9 @@ if not MinimizeGui then
 				TS:Create(Window, TweenInfo.new(0.25), {Size = UDim2.new(0, 600,0, 400)}):Play()
 			end
 		end
-		wait()
-		game.Lighting.Blur:Destroy()
-	end)
+	wait()
+	game.Lighting.Blur:Destroy()
+end)
 
 
 	function dragify(Frame)
@@ -233,7 +231,7 @@ if not MinimizeGui then
 
 		Tabs.Name = "Tabs"
 		Tabs.Parent = Window
-		Tabs.BackgroundColor3 = Color3.fromRGB(93, 0, 231)
+		Tabs.BackgroundColor3 = Color3.fromRGB(40, 40, 48)
 		Tabs.Position = UDim2.new(0, 5, 0, 36)
 		Tabs.Size = UDim2.new(0, 140, 1, -41)
 
@@ -242,13 +240,13 @@ if not MinimizeGui then
 
 		SectionLabel.Name = "SectionLabel"
 		SectionLabel.Parent = Tabs
-		SectionLabel.BackgroundColor3 = Color3.fromRGB(93, 0, 231)
+		SectionLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		SectionLabel.BackgroundTransparency = 1.000
 		SectionLabel.Position = UDim2.new(0, 7, 0, 0)
 		SectionLabel.Size = UDim2.new(1, -7, 0, 30)
 		SectionLabel.Font = Enum.Font.GothamBlack
 		SectionLabel.Text = name --"Section 1"
-		SectionLabel.TextColor3 = Color3.fromRGB(1, 2, 0)
+		SectionLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 		SectionLabel.TextSize = 12.000
 		SectionLabel.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -259,18 +257,18 @@ if not MinimizeGui then
 		--LATER
 		--[[PageButton.Name = "PageButton"
 		PageButton.Parent = Tabs
-		PageButton.BackgroundColor3 = Color3.fromRGB(93, 0, 231)
+		PageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 		PageButton.BackgroundTransparency = 1.000
 		PageButton.Size = UDim2.new(1, -14, 0, 20)
 		PageButton.Font = Enum.Font.Gotham
 		PageButton.Text = "Page 1"
-		PageButton.TextColor3 = Color3.fromRGB(1, 2, 0)
+		PageButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 		PageButton.TextSize = 12.000
 		PageButton.TextXAlignment = Enum.TextXAlignment.Left]]
 
 		Indicator.Name = "Indicator"
 		Indicator.Parent = Tabs
-		Indicator.BackgroundColor3 = Color3.fromRGB(93, 0, 231)
+		Indicator.BackgroundColor3 = Color3.fromRGB(135, 255, 135)
 		Indicator.BorderSizePixel = 0
 		Indicator.BackgroundTransparency = 1
 		Indicator.Position = UDim2.new(0, -14, 0, 4)
@@ -304,8 +302,8 @@ if not MinimizeGui then
 			Page.Name = "Page"
 			Page.Parent = Window
 			Page.Active = true
-			Page.BackgroundColor3 = Color3.fromRGB(93, 0, 231)
-			Page.BorderColor3 = Color3.fromRGB(1, 2, 0)
+			Page.BackgroundColor3 = Color3.fromRGB(40, 40, 48)
+			Page.BorderColor3 = Color3.fromRGB(27, 42, 53)
 			Page.BorderSizePixel = 0
 			Page.Position = UDim2.new(0, 150, 0, 36)
 			Page.Size = UDim2.new(1, -155, 1, -41)
@@ -353,7 +351,7 @@ if not MinimizeGui then
 
 			SearchBox.Name = "SearchBox"
 			SearchBox.Parent = SearchBar
-			SearchBox.BackgroundColor3 = Color3.fromRGB(1, 2, 0)
+			SearchBox.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			SearchBox.BackgroundTransparency = 1.000
 			SearchBox.Position = UDim2.new(0, 40, 0, 1)
 			SearchBox.Size = UDim2.new(1, -40, 1, 0)
@@ -367,7 +365,7 @@ if not MinimizeGui then
 
 			Section.Name = "Section"
 			Section.Parent = Page
-			Section.BackgroundColor3 = Color3.fromRGB(1, 2, 0)
+			Section.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			Section.BackgroundTransparency = 1.000
 			Section.BorderSizePixel = 0
 			Section.Position = UDim2.new(0.0170000363, 0, 0.0968660116, 0)
@@ -378,7 +376,7 @@ if not MinimizeGui then
 
 			SectionContainer.Name = "SectionContainer"
 			SectionContainer.Parent = Section
-			SectionContainer.BackgroundColor3 = Color3.fromRGB(1, 2, 0)
+			SectionContainer.BackgroundColor3 = Color3.fromRGB(30, 30, 36)
 			SectionContainer.BorderSizePixel = 0
 			SectionContainer.ClipsDescendants = true
 			SectionContainer.Position = UDim2.new(0, 0, 1.25310734e-07, 0)
@@ -519,12 +517,12 @@ if not MinimizeGui then
 			local PageButton = Instance.new("TextButton")
 			PageButton.Name = "PageButton"
 			PageButton.Parent = Tabs
-			PageButton.BackgroundColor3 = Color3.fromRGB(1, 2, 0)
+			PageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 			PageButton.BackgroundTransparency = 1.000
 			PageButton.Size = UDim2.new(1, -14, 0, 20)
 			PageButton.Font = Enum.Font.Gotham
 			PageButton.Text = name
-			PageButton.TextColor3 = Color3.fromRGB(93, 0, 231)
+			PageButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 			PageButton.TextSize = 12.000
 			PageButton.TextTransparency = 0.5
 			PageButton.TextXAlignment = Enum.TextXAlignment.Left
