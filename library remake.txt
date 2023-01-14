@@ -141,12 +141,11 @@ function library:CreateWindow(name, version, icon)
 			wait()
 		until Window.Size == UDim2.new(0, 0, 0, 0)
 		MyGui:Remove()
+wait()
 game.Lighting.Blur:Destroy()
 	end)
 
 	Minimize.MouseButton1Click:Connect(function()
-		local blur = Instance.new("BlurEffect", game.Lighting)
-   wait()
 if not MinimizeGui then
 			MinimizeGui = true
 			if Window.Size == UDim2.new(0, 600,0, 400) then
@@ -157,7 +156,9 @@ if not MinimizeGui then
 				end
 				if Tabs and Tabs.Visible == true then
 					Tabs.Visible = false
-				end
+				wait()
+local blur = Instance.new("BlurEffect", game.Lighting)
+end
 			end
           else
 			MinimizeGui = false
