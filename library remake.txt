@@ -141,10 +141,13 @@ function library:CreateWindow(name, version, icon)
 			wait()
 		until Window.Size == UDim2.new(0, 0, 0, 0)
 		MyGui:Remove()
+game.Lighting.Blur:Destroy()
 	end)
 
 	Minimize.MouseButton1Click:Connect(function()
-		if not MinimizeGui then
+		local blur = Instance.new("BlurEffect", game.Lighting)
+   wait()
+if not MinimizeGui then
 			MinimizeGui = true
 			if Window.Size == UDim2.new(0, 600,0, 400) then
 				TS:Create(Window, TweenInfo.new(0.25), {Size = UDim2.new(0, 600,0, 32)}):Play()
@@ -156,9 +159,7 @@ function library:CreateWindow(name, version, icon)
 					Tabs.Visible = false
 				end
 			end
-		wait()
-		local blur = Instance.new("BlurEffect", game.Lighting)
-else
+          else
 			MinimizeGui = false
 			if Window.Size == UDim2.new(0, 600,0, 32) then
 				if Page and Page.Visible == true then
